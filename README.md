@@ -1,6 +1,7 @@
 # Personal portfolio
 
-This portfolio is built with React and Vite.
+This portfolio is built with React and Vite. Global styles live in
+`src/index.css`, and portfolio-specific styles live in `src/App.css`.
 
 ## Development
 
