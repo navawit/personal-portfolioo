@@ -2,36 +2,42 @@ import React, { useEffect } from "react";
 
 const services = [
   {
-    category: "01 / Visual identity",
-    title: "Graphic design",
+    category: "01 / Brand systems",
+    title: "Visual identity",
     description:
-      "Distinctive identities, art direction, and visual systems built to communicate with clarity.",
+      "Distinctive identities, art direction, and clear visual systems that help brands feel memorable and confident.",
   },
   {
-    category: "02 / Moving image",
-    title: "Video editing",
+    category: "02 / Storytelling",
+    title: "Motion & editing",
     description:
-      "Thoughtful cuts, precise pacing, and stories that hold attention from the first frame to the last.",
+      "Carefully paced edits and visual narratives designed to hold attention and create emotional clarity.",
   },
   {
-    category: "03 / Behind the lens",
+    category: "03 / Image making",
     title: "Cinematography",
     description:
-      "Atmospheric visuals shaped by light, composition, color, and emotion.",
+      "Atmospheric, character-driven visuals shaped by light, composition, and authentic moments.",
   },
   {
     category: "04 / Digital craft",
-    title: "Front-end development",
+    title: "Front-end design",
     description:
-      "Responsive, accessible digital experiences that balance thoughtful design with practical functionality.",
+      "Responsive experiences that marry elegant interaction with intuitive structure and lasting usability.",
   },
+];
+
+const stats = [
+  { value: "7+", label: "Years crafting ideas" },
+  { value: "30+", label: "Projects launched" },
+  { value: "12", label: "Creative partners" },
 ];
 
 const projects = [
   {
-    name: "Open Form — Identity & Campaign",
-    description: "A flexible visual language for an arts festival.",
-    category: "Design",
+    name: "Open Form — Identity & Launch",
+    description: "A flexible visual language for an experimental arts festival.",
+    category: "Brand / Campaign",
     image:
       "https://images.unsplash.com/photo-1531058020387-3be344556be6?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Colorful contemporary art exhibition",
@@ -39,17 +45,17 @@ const projects = [
   },
   {
     name: "Still / Moving — Short Film",
-    description: "A quiet study of place, memory, and home.",
-    category: "Film",
+    description: "A quiet study of memory, place, and the rituals of home.",
+    category: "Film / Edit",
     image:
       "https://images.unsplash.com/photo-1485846234645-a62644f84728?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Cinema projector and film equipment",
     ariaLabel: "Discuss a film project like Still Moving",
   },
   {
-    name: "Field Notes — Digital Experience",
-    description: "An editorial home for ideas and independent voices.",
-    category: "Web",
+    name: "Field Notes — Editorial Platform",
+    description: "An immersive digital home for thoughtful stories and independent voices.",
+    category: "Web / UX",
     image:
       "https://images.unsplash.com/photo-1494438639946-1ebd1d20bf85?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Warm minimalist interior with plants and furniture",
@@ -57,8 +63,8 @@ const projects = [
   },
   {
     name: "After Hours — Live Session",
-    description: "An intimate performance film, shot and edited on location.",
-    category: "Film / Edit",
+    description: "An intimate performance film produced and edited on location.",
+    category: "Film / Direction",
     image:
       "https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=1200&q=85",
     imageAlt: "Live musical performance under dramatic lighting",
@@ -163,23 +169,33 @@ function App() {
           <section className="hero" id="home" aria-labelledby="hero-title">
             <p className="eyebrow">
               <span className="eyebrow-line" aria-hidden="true" />
-              Independent creative · Multidisciplinary designer
+              Independent creative · Designer, filmmaker, developer
             </p>
             <h1 id="hero-title">
-              Ideas made
+              Designing thoughtful
               <br />
-              <span>to be seen.</span>
+              <span>digital stories.</span>
             </h1>
             <div className="hero-bottom">
               <p className="intro">
-                I’m Navawit Nigussie — a multidisciplinary creative bringing
-                thoughtful stories to life through design, film, and the web.
+                I craft visual identities, cinematic experiences, and digital platforms
+                that feel clear, intentional, and human.
               </p>
               <a className="round-link" href="#work" aria-label="Explore selected work">
                 <span aria-hidden="true">↓</span>
               </a>
             </div>
-            <p className="hero-index">DESIGN / FILM / DIGITAL</p>
+
+            <div className="hero-metrics" aria-label="Key stats">
+              {stats.map((stat) => (
+                <div className="metric" key={stat.label}>
+                  <span>{stat.value}</span>
+                  <small>{stat.label}</small>
+                </div>
+              ))}
+            </div>
+
+            <p className="hero-index">BRAND / FILM / DIGITAL</p>
           </section>
 
           <section className="hero-image" aria-label="Creative studio">
@@ -206,8 +222,8 @@ function App() {
                 </h2>
               </div>
               <p className="section-description">
-                One curious mind, four creative toolkits. Each discipline
-                brings a different perspective to the work.
+                Thoughtful strategy, strong visuals, and a refined digital approach — all
+                built to help ideas feel real and resonate with people.
               </p>
             </div>
             <div className="services-grid">
@@ -231,14 +247,14 @@ function App() {
           >
             <div className="section-heading">
               <div>
-                <p className="eyebrow">A selection of projects</p>
+                <p className="eyebrow">Selected work</p>
                 <h2 id="work-title">
-                  Selected work<span className="accent">.</span>
+                  Recent projects<span className="accent">.</span>
                 </h2>
               </div>
               <p className="section-description">
-                A collection of visual identities, moving images, and digital
-                experiences made with intention.
+                A collection of identities, moving images, and digital experiences shaped
+                with intention and built for lasting impact.
               </p>
             </div>
             <div className="work-grid">
@@ -278,18 +294,18 @@ function App() {
             </div>
             <div className="about-content">
               <h2 id="about-title">
-                Good work starts with a good conversation
+                Good work starts with a real conversation
                 <span className="accent">.</span>
               </h2>
               <div className="about-copy">
                 <p>
-                  I’m a multidisciplinary creative who enjoys moving between
-                  disciplines. From the first sketch to the final frame or line
-                  of code, I build work that feels clear, considered, and human.
+                  I’m a multidisciplinary creative working between design, film, and digital
+                  experiences. I enjoy turning complex ideas into clear, emotionally resonant
+                  work that feels effortless to experience.
                 </p>
                 <p>
-                  My approach combines visual curiosity, technical precision,
-                  and a genuine interest in the people behind every project.
+                  My process blends visual curiosity, practical thinking, and careful craft,
+                  helping teams shape ideas into something memorable and useful.
                 </p>
                 <a className="text-link" href="#contact">
                   Tell me about your project <span aria-hidden="true">↗</span>
@@ -307,16 +323,16 @@ function App() {
                 <span>it happen.</span>
               </h2>
               <p className="contact-description">
-                Have an idea, a question, or a project in mind? I’d love to hear
-                what you’re working on.
+                If you’re building a brand, film, or digital experience, I’d love to hear
+                what you’re creating and how I can help bring it to life.
               </p>
-              <a className="contact-email" href="mailto:hello@example.com">
-                hello@example.com <span aria-hidden="true">↗</span>
+              <a className="contact-email" href="mailto:hello@navawit.design">
+                hello@navawit.design <span aria-hidden="true">↗</span>
               </a>
             </div>
             <a
               className="contact-circle"
-              href="mailto:hello@example.com"
+              href="mailto:hello@navawit.design"
               aria-label="Send Navawit an email"
             >
               <span aria-hidden="true">↗</span>
@@ -332,8 +348,7 @@ function App() {
             NN<span>.</span>
           </a>
           <p className="footer-note">
-            © {new Date().getFullYear()} Navawit Nigussie. Designed with
-            intention.
+            © {new Date().getFullYear()} Navawit Nigussie. Designed with intention.
           </p>
           <nav className="footer-links" aria-label="Social links">
             <a
@@ -350,7 +365,7 @@ function App() {
             >
               LinkedIn <span aria-hidden="true">↗</span>
             </a>
-            <a href="mailto:hello@example.com">
+            <a href="mailto:hello@navawit.design">
               Email <span aria-hidden="true">↗</span>
             </a>
           </nav>
