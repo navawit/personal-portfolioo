@@ -1,20 +1,16 @@
-# Personal portfolio
+# Navawit — Creative Portfolio
 
-This portfolio is built with React and Vite. Global styles live in
-`src/index.css`, and portfolio-specific styles live in `src/App.css`.
+A responsive personal portfolio for Navawit, built with plain HTML, CSS, and JavaScript.
 
-## Development
+## Run locally
 
-Install dependencies and start the local development server:
+Open `index.html` in a browser, or serve this folder with any static file server.
 
-```sh
-npm install
-npm run dev
-```
+## Customize
 
-## Production build
+- Replace the image URLs and project labels in `index.html` with your own work.
+- Add your preferred contact details in the contact section.
+- Update colors and layout in `styles.css`.
+- The role rotation, mobile navigation, and reveal effects are in `main.js`.
 
-```sh
-npm run build
-npm run preview
-```
+The portfolio project cards are visual placeholders and do not represent completed client work.
